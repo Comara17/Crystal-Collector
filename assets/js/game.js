@@ -67,7 +67,7 @@ $(document).ready(function() {
 					check = true; break
 				}
 			  }
-			  if(!found)numbers[numbers.length]=randomnumber;
+			  if(!check)numbers[numbers.length]=randomnumber;
 			}		
 
 		for (i = 0; i < numbers.length; i++) {
