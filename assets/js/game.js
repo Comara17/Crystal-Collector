@@ -20,16 +20,18 @@ $(document).ready(function() {
 
 		var numberToGuess = Math.floor(Math.random()*(120-19+1)+19);
 
-		$('.value').text(numberToGuess);
+		$('#numberTarget').text(numberToGuess);
 
 
 		$('.crystalImage').on('click', function(){
-		    counter = counter + parseInt($(this).data('num'));
-		   
+		    counter = counter + $(this).data('num');
+		  
 		    $('#yourScore').text(counter);
-
+            
+            $('#status').empty();
+            
 		    if (counter == numberToGuess){
-		      $('#status').text('You won!!!!');
+		      $('#status').text('You won!');
 		      wins += 1;
 		      $('#win').text(wins);
 		      $('#crystals').empty();
