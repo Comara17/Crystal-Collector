@@ -11,7 +11,7 @@
 	</head>
 	
 	<body>
-		
+<!--		Navbar with my name and little knight icon because awesome    -->
 		<nav class="navbar navbar-default">
 		  <div class="container">
 			<div class="navbar-header">
@@ -19,10 +19,11 @@
 			</div>
 		  </div>
 		</nav>
-		
+
 		<div class="container">
 			<div class="row">
-				<div class="panel panel-default col-md-4">
+<!--		Information panel with instructions   -->
+                <div class="panel panel-default col-md-4">
 				  <div class="panel-body">
 					<h1>Crystal Collector</h1>
 					<p>
@@ -30,40 +31,41 @@
 					</p>
 				  </div>
 				</div>
+<!--                Divider hack        -->
                 <div class="col-md-2"></div>
-				<div class="jumbotron col-md-6">
-				    <div class="panel panel-default col-md-6">
-                      <div class="panel-heading text-center">Target Number</div>
-                      <div class="panel-body">
-                        <span id="numberTarget"></span>
-                      </div>
-                    </div>
-                    
+<!--                Main game window      -->
+                <div class="jumbotron col-md-6">
+<!--                    Target number panel     -->
                     <div class="panel panel-default col-md-6">
-                      <div class="panel-heading text-center">Your Score</div>
-                      <div class="panel-body">
-                        <span id="yourScore"></span>
-                      </div>
-                    </div>
-                    
+                        <div class="panel-heading text-center">Target Number</div>
+                            <div class="panel-body">
+                                <span id="numberTarget"></span>
+                            </div>
+                        </div>
+<!--                    Your score panel        -->
+                    <div class="panel panel-default col-md-6">
+                        <div class="panel-heading text-center">Your Score</div>
+                          <div class="panel-body">
+                            <span id="yourScore"></span>
+                          </div>
+                        </div>
+<!--                    Crystal button panel        -->
                     <div class="panel panel-default text-center">
-                      <div id="crystals" class="panel-body">
-                      </div>
+                        <div id="crystals" class="panel-body">
+                        </div>
+                    </div>
+<!--                    Status panel        -->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>Status: <span id="status"></span></p>
+                            <p>Wins: <span id="win"></span></p>
+                            <p>Losses: <span id="loss"></span></p>
+                        </div>
                     </div>
                     
-                     <div class="panel panel-default">
-                      <div class="panel-body">
-                          <p>Status: <span id="status"></span></p>
-                          <p>Wins: <span id="win"></span></p>
-                          <p>Losses: <span id="loss"></span></p>
-                      </div>
-				</div>
-                    
-				</div>
-			</div>
-        
-               
-            </div>
+                </div>
+			 </div>
+        </div>
             
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.js"

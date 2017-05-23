@@ -1,14 +1,18 @@
 $(document).ready(function() {
-
+    
+    //Init status variables
 	var counter = 0;
 	var wins = 0;
 	var losses = 0;
 	
+    //Image array
 	var crystals = ['assets/images/crystal1.png','assets/images/crystal2.png','assets/images/crystal3.png','assets/images/crystal4.png'];
 	
+    //Update status text in <span>
 	$('#win').text(wins);
 	$('#loss').text(losses);
 	
+    //Start new game/Add new values to crystals
 	createCrystals();
 	newGame();
 
@@ -17,19 +21,20 @@ $(document).ready(function() {
 
 		counter = 0;
 		$('#yourScore').text(counter);
-
+        //Create a random value between 19 and 120 and assign it to #numberTarget
 		var numberToGuess = Math.floor(Math.random()*(120-19+1)+19);
 
 		$('#numberTarget').text(numberToGuess);
 
-
+        //When a crystal is clicked
 		$('.crystalImage').on('click', function(){
-		    counter = counter + $(this).data('num');
+		    //yourScore is updated in status panel
+            counter = counter + $(this).data('num');
 		  
 		    $('#yourScore').text(counter);
             
             $('#status').empty();
-            
+            //Simple conditional to check if yourScore is equal to targetScore
 		    if (counter == numberToGuess){
 		      $('#status').text('You won!');
 		      wins += 1;
@@ -51,12 +56,15 @@ $(document).ready(function() {
 	
 	function createCrystals () {
 		var numbers = []
+            //  Had to use a while loop to create an array of random numbers to assign to 
+            //  each crystal. This was a major struggle btw. 
+            
 			while(numbers.length < 4){
 			  var randomnumber = Math.floor(Math.random()*(12-2)+2);
-			  var found = false;
+			  var check = false;
 			  for (var i=0; i< numbers.length; i++){
 				if (numbers[i] == randomnumber){
-					found = true; break
+					check = true; break
 				}
 			  }
 			  if(!found)numbers[numbers.length]=randomnumber;
